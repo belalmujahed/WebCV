@@ -1,0 +1,310 @@
+/* Custom additional styles for the CV */
+
+/* Material Design 3 color system */
+:root {
+    /* Primary color and variants */
+    --md-primary: #006a6a;
+    --md-on-primary: #ffffff;
+    --md-primary-container: #84f3f3;
+    --md-on-primary-container: #002020;
+
+    /* Secondary color and variants */
+    --md-secondary: #4a6363;
+    --md-on-secondary: #ffffff;
+    --md-secondary-container: #cce8e7;
+    --md-on-secondary-container: #051f1e;
+
+    /* Tertiary color and variants */
+    --md-tertiary: #4b607c;
+    --md-on-tertiary: #ffffff;
+    --md-tertiary-container: #d2e4ff;
+    --md-on-tertiary-container: #041c35;
+
+    /* Surface colors */
+    --md-surface: #f8faf9;
+    --md-on-surface: #191c1c;
+    --md-surface-variant: #dae5e4;
+    --md-on-surface-variant: #3f4948;
+
+    /* Background colors */
+    --md-background: #f8faf9;
+    --md-on-background: #191c1c;
+
+    /* Error colors */
+    --md-error: #ba1a1a;
+    --md-error-container: #ffdad6;
+    --md-on-error: #ffffff;
+    --md-on-error-container: #410002;
+
+    /* Outline colors */
+    --md-outline: #6f7978;
+    --md-outline-variant: #bec8c7;
+
+    /* Shadow and overlay colors */
+    --md-shadow: rgba(0, 0, 0, 0.08);
+    --md-scrim: rgba(0, 0, 0, 0.4);
+
+    /* Elevation values (for drop shadows) */
+    --md-elevation-1: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    --md-elevation-2: 0 3px 6px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.12);
+    --md-elevation-3: 0 10px 20px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.1);
+    --md-elevation-4: 0 15px 25px rgba(0, 0, 0, 0.15), 0 5px 10px rgba(0, 0, 0, 0.05);
+    --md-elevation-5: 0 20px 40px rgba(0, 0, 0, 0.2);
+
+    /* Material Design Typography */
+    --md-font-display-large: 700 3.5rem/4rem 'Inter', system-ui, sans-serif;
+    --md-font-display-medium: 700 2.8rem/3.5rem 'Inter', system-ui, sans-serif;
+    --md-font-display-small: 700 2.25rem/2.75rem 'Inter', system-ui, sans-serif;
+
+    --md-font-headline-large: 700 2rem/2.5rem 'Inter', system-ui, sans-serif;
+    --md-font-headline-medium: 700 1.75rem/2.25rem 'Inter', system-ui, sans-serif;
+    --md-font-headline-small: 700 1.5rem/2rem 'Inter', system-ui, sans-serif;
+
+    --md-font-title-large: 700 1.375rem/1.75rem 'Inter', system-ui, sans-serif;
+    --md-font-title-medium: 600 1rem/1.5rem 'Inter', system-ui, sans-serif;
+    --md-font-title-small: 600 0.875rem/1.25rem 'Inter', system-ui, sans-serif;
+
+    --md-font-body-large: 400 1rem/1.5rem 'Inter', system-ui, sans-serif;
+    --md-font-body-medium: 400 0.875rem/1.25rem 'Inter', system-ui, sans-serif;
+    --md-font-body-small: 400 0.75rem/1rem 'Inter', system-ui, sans-serif;
+}
+
+/* Base styles with Material Design principles */
+body {
+    background-color: var(--md-background);
+    color: var(--md-on-background);
+}
+
+/* Gradient backgrounds for sections */
+.gradient-primary {
+    background-image: linear-gradient(135deg, var(--primary), #4f46e5);
+}
+
+.gradient-secondary {
+    background-image: linear-gradient(135deg, #f5f5f4, var(--accent));
+}
+
+.gradient-hero {
+    background-image: linear-gradient(120deg, #dbeafe, #e0f2fe);
+}
+
+.gradient-footer {
+    background-image: linear-gradient(to bottom, var(--accent), #eff6ff);
+}
+
+/* Card styles with Material Design elevation */
+.md-card {
+    background-color: var(--md-surface);
+    border-radius: 16px;
+    box-shadow: var(--md-elevation-1);
+    transition: box-shadow 0.3s ease;
+}
+
+.md-card:hover {
+    box-shadow: var(--md-elevation-3);
+}
+
+/* Button styles following Material Design */
+.md-button {
+    border-radius: 100px;
+    font: var(--md-font-title-small);
+    padding: 10px 24px;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.md-button-primary {
+    background-color: var(--md-primary);
+    color: var(--md-on-primary);
+}
+
+.md-button-primary:hover {
+    box-shadow: var(--md-elevation-2);
+    background-color: color-mix(in srgb, var(--md-primary) 90%, #000000);
+}
+
+.md-button-outlined {
+    background-color: transparent;
+    color: var(--md-primary);
+    border: 1px solid var(--md-outline);
+}
+
+.md-button-outlined:hover {
+    background-color: color-mix(in srgb, var(--md-primary) 8%, transparent);
+}
+
+/* Section styling with consistent background */
+section {
+    background-color: var(--md-background) !important;
+    padding: 2rem 0;
+}
+
+/* Section headers with Material Design typography */
+.md-section-title {
+    font: var(--md-font-headline-small);
+    color: var(--md-primary);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Progress bars for skills */
+.md-progress-track {
+    background-color: var(--md-surface-variant);
+    border-radius: 100px;
+    height: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.md-progress-bar {
+    background-color: var(--md-primary);
+    height: 100%;
+    border-radius: 100px;
+    transition: width 0.6s ease;
+}
+
+/* Badge styling */
+.md-badge {
+    background-color: var(--md-primary-container);
+    color: var(--md-on-primary-container);
+    border-radius: 16px;
+    padding: 4px 12px;
+    font: var(--md-font-body-small);
+}
+
+.md-badge-secondary {
+    background-color: var(--md-secondary-container);
+    color: var(--md-on-secondary-container);
+}
+
+.md-badge-tertiary {
+    background-color: var(--md-tertiary-container);
+    color: var(--md-on-tertiary-container);
+}
+
+/* Separator with Material Design style */
+.md-separator {
+    height: 1px;
+    background-color: var(--md-outline-variant);
+    margin: 1rem 0;
+}
+
+/* Form inputs with Material Design styling */
+.md-input {
+    border: 1px solid var(--md-outline-variant);
+    border-radius: 4px;
+    padding: 12px 16px;
+    background-color: var(--md-surface);
+    color: var(--md-on-surface);
+    transition: all 0.2s ease;
+}
+
+.md-input:focus {
+    border-color: var(--md-primary);
+    outline: none;
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--md-primary) 30%, transparent);
+}
+
+.md-label {
+    color: var(--md-on-surface-variant);
+    font: var(--md-font-body-medium);
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* Icons styling */
+.md-icon-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    color: var(--md-primary);
+    background-color: transparent;
+}
+
+.md-icon-button:hover {
+    background-color: color-mix(in srgb, var(--md-primary) 8%, transparent);
+}
+
+/* Custom additional styles for the CV */
+
+/* Global styles */
+body {
+    background-image: linear-gradient(to bottom, var(--background), #eef2ff);
+}
+
+/* Card hover effects */
+.card-hover-effect {
+    transition: all 0.3s ease-in-out;
+    border: 1px solid transparent;
+}
+
+.card-hover-effect:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.2);
+    border-color: rgba(59, 130, 246, 0.3);
+}
+
+/* Colorful borders */
+.border-left-accent {
+    border-left: 4px solid var(--primary);
+}
+
+.border-top-accent {
+    border-top: 4px solid var(--primary);
+}
+
+/* Section backgrounds */
+.bg-skill-section {
+    background-color: #f0f9ff;
+    background-image: radial-gradient(at 0% 100%, rgba(186, 230, 253, 0.4) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(147, 197, 253, 0.3) 0px, transparent 50%);
+}
+
+.bg-project-section {
+    background-color: #fefce8;
+    background-image: radial-gradient(at 0% 100%, rgba(254, 243, 199, 0.4) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(250, 204, 21, 0.2) 0px, transparent 50%);
+}
+
+.bg-education-section {
+    background-color: #f0fdf4;
+    background-image: radial-gradient(at 0% 100%, rgba(187, 247, 208, 0.4) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(134, 239, 172, 0.3) 0px, transparent 50%);
+}
+
+/* Fancy badge styles */
+.fancy-badge {
+    background-color: rgba(59, 130, 246, 0.1);
+    color: var(--primary);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    box-shadow: 0 2px 8px -2px rgba(59, 130, 246, 0.1);
+}
+
+/* Icon backgrounds */
+.icon-bg {
+    background-color: var(--accent);
+    color: var(--accent-foreground);
+    border-radius: 50%;
+    padding: 0.5rem;
+    box-shadow: 0 4px 12px -4px rgba(59, 130, 246, 0.3);
+}
+
+/* Animated gradients for progress bars */
+.progress-gradient {
+    background: linear-gradient(90deg, var(--primary) 0%, #4f46e5 50%, var(--primary) 100%);
+    background-size: 200% auto;
+    animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+    to {
+        background-position: 200% center;
+    }
+}
